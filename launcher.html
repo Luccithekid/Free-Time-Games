@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Game Launcher - Free Time Games</title>
+	<link rel="stylesheet" href="/css/launcher.css">
+	<script src="/js/utilities/env.js" defer></script>
+	<script src="/js/utilities/experiments.js" defer></script>
+	<script src="/js/utilities/imports.bundle.js" defer></script>
+	<script src="/js/utilities/preferences.js" defer></script>
+	<script src="/js/utilities/local-games.js" defer></script>
+	<script src="/js/utilities/metrics.js" defer></script>
+	<script src="/js/launcher.js" defer></script>
+</head>
+
+<body>
+	<header class="logo-top">
+		<img src="/assets/branding/FTGspelled.png" alt="Free Time Games Logo" class="logo">
+		<a class="settingsIconA" href="/options.html" target="_blank">
+			<img class="settingsIcon" src="/assets/icons/settings_24.png" alt="Settings">
+		</a>
+	</header>
+
+	<main>
+		<div class="gameCards" id="gamesContainer">
+			<!-- Games will be loaded dynamically here -->
+			<div class="spinnerParent">
+			  <div class="spinner"></div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

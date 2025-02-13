@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Free Time Games</title>
+	<link rel="stylesheet" href="/css/player.css">
+	<script src="/js/utilities/env.js" defer></script>
+	<script src="/js/utilities/experiments.js" defer></script>
+	<script src="/js/utilities/imports.bundle.js" defer></script>
+	<script src="/js/utilities/local-games.js" defer></script>
+	<script src="/js/utilities/warn.js" defer></script>
+	<script src="/js/utilities/preferences.js" defer></script>
+	<script src="/js/utilities/metrics.js" defer></script>
+	<script src="/js/play.js" defer></script>
+</head>
+
+<body>
+	<div class="debugWatermark">
+		<h1 class="debugTxt"></h1>
+	</div>
+
+	<header class="topBar">
+		<img src="/assets/branding/FTGspelled.png" alt="Free Time Games Logo" class="logo">
+		<span class="gameTitle"></span>
+	</header>
+
+	<main class="gameArea">
+		<div class="loadingOverlay" id="loadingOverlay">
+			<div class="spinner"></div>
+		</div>
+		<iframe class="gameAreaEmbed" src="" title="Game Embed" allowfullscreen></iframe>
+	</main>
+</body>
+
+</html>

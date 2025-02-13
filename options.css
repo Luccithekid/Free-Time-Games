@@ -1,0 +1,246 @@
+/* ================================
+   Global + Layout
+   ================================ */
+body {
+  margin: 0;
+  padding: 0;
+  background: none;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+a {
+  color: rgb(33, 144, 255);
+}
+
+.internal-header {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+/* Sidebar/left column */
+.sidebar {
+  /* Force fixed width in a flex container */
+  flex: 0 0 175px;
+  width: 175px;
+  min-width: 175px;
+  max-width: 175px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* Main column */
+.options-content {
+  flex: 1; /* fill remaining space */
+  padding: 10px;
+  color: black; /* Default text color in normal light mode */
+  overflow-y: scroll;
+}
+
+/* Navigation list */
+.options-nav-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: black;
+}
+.options-nav-list-item {
+  text-decoration: none;
+  display: block;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+}
+.ui-btn {
+  text-decoration: none;
+  background-color: #f8f8f8;
+  color: black;
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+.ui-btn:hover {
+  background-color: #bebebe;
+  transition: 0.3s;
+}
+.sel {
+  background-color: #fcfcfc;
+  border: 2px solid #dcdddc;
+}
+
+/* Additional bits */
+.server-status {
+  color: red;
+  text-align: right;
+  float: right;
+  font-weight: 700;
+}
+.rollout-customize {
+  display: none;
+}
+.rollout-beta-program {
+  display: none;
+}
+.rollout-support {
+  display: none;
+}
+
+/* The content box styling */
+div.content {
+  background-color: white;
+  padding: 15px;
+  width: 644px;
+  height: 485px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -337px;
+  margin-top: -228px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2),
+			  0 6px 20px rgba(0,0,0,0.19);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column !important;
+  color: black; /* default text color (light) */
+}
+
+/* About Page */
+div.about {
+  display: inline-flex;
+  text-align: center;
+  gap: 10px; /* Adjust the gap as needed */
+  margin-bottom: 10px;
+}
+
+form.about {
+  margin: 0; /* Remove default margin for consistency */
+}
+
+/* Credits Page */
+.games-list {
+  max-height: 380px;
+  overflow-y: scroll;
+}
+.game-item {
+  padding-bottom: 10px;
+}
+
+/* ================================================
+   MATCHING RULES FOR SYSTEM DARK (via media query)
+   ================================================ */
+@media (prefers-color-scheme: dark) {
+  body {
+	background-color: #454545 !important;
+	color: #dedede;
+  }
+  .content {
+	background-color: #1f1f1f !important;
+	color: #dedede;
+  }
+  .sidebar {
+	background-color: #303030 !important;
+  }
+  .options-content {
+	color: #dedede !important;
+  }
+  .ui-btn {
+	background-color: #202020 !important;
+	color: white !important;
+  }
+  .options-nav-list-item {
+	background-color: #202020 !important;
+	color: white !important;
+  }
+  .sel {
+	background-color: #1a1a1a !important;
+	border: 2px solid #505050 !important;
+	color: #dedede !important;
+  }
+  .ui-btn:hover {
+	background-color: #6c6c6c !important;
+  }
+  .v-text {
+	color: white !important;
+  }
+}
+
+/* =============================================
+   FORCED .dark overrides (Options Pages)
+   (Same rules as above, but prefixed by html.dark)
+   ============================================= */
+html.dark body {
+  background-color: #454545 !important;
+  color: #dedede !important;
+}
+html.dark .content {
+  background-color: #1f1f1f !important;
+  color: #dedede !important;
+}
+html.dark .sidebar {
+  background-color: #303030 !important;
+}
+html.dark .options-content {
+  color: #dedede !important;
+}
+html.dark .ui-btn {
+  background-color: #202020 !important;
+  color: white !important;
+}
+html.dark .options-nav-list-item {
+  background-color: #202020 !important;
+  color: white !important;
+}
+html.dark .sel {
+  background-color: #1a1a1a !important;
+  border: 2px solid #505050 !important;
+  color: #dedede !important;
+}
+html.dark .ui-btn:hover {
+  background-color: #6c6c6c !important;
+}
+html.dark .v-text {
+  color: white !important;
+}
+
+/* =============================================
+   FORCED .light overrides (Options Pages)
+   ============================================= */
+html.light body {
+  background-color: white !important;
+  color: black !important;
+}
+html.light .content {
+  background-color: white !important;
+  color: black !important;
+}
+html.light .sidebar {
+  background-color: #f2f2f2 !important;
+}
+html.light .options-content {
+  color: black !important;
+}
+html.light .ui-btn {
+  background-color: #f8f8f8 !important;
+  color: black !important;
+}
+html.light .options-nav-list-item {
+  background-color: #f8f8f8 !important;
+  color: black !important;
+}
+html.light .sel {
+  background-color: #fcfcfc !important;
+  border: 2px solid #dcdddc !important;
+  color: black !important;
+}
+html.light .ui-btn:hover {
+  background-color: #bebebe !important;
+}

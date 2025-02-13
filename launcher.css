@@ -1,0 +1,218 @@
+/* Popup Launcher CSS */
+
+@media (prefers-color-scheme: dark) {
+  
+    .spinner {
+      border: 0.4rem solid rgba(255, 255, 255, 0.2) !important;
+      border-top: 0.4rem solid #fff !important;
+    }
+
+	.logo-top {
+  		background-color: #2E2E2E !important;
+  		color: white !important;
+  		border: 1px solid #282828 !important;
+}
+	.gameCards {
+		background-color: #4F4F4F !important;
+}
+	body {
+		background-color: #4F4F4F !important;
+}
+	.warn {
+		color: white;
+	}
+	.settingsIcon {
+		filter: invert();
+}
+	.vtag {
+		color: white !important;
+	}
+
+}
+
+body {
+	background-color: #DEDDDE;
+	color: black;
+	font-family: sans-serif;
+	height: 300px !important;
+	width: 415px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+.logo-top {
+	text-align: center;
+  	vertical-align: middle;
+  	width: calc(100% - 2px);
+  	height: 50px;
+  	background-color: #E4E4E4;
+  	border-radius: 0px 0px 15px 15px;
+  	border: 1px solid #A3A3A3;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	position: relative;
+}
+.logo {
+	height: 50px;
+	width: auto;
+	display: inline-block;
+	float: center;
+	padding-left: 15px;
+}
+.settingsIconA {
+	height: 24px;
+	width: 24px;
+	float: right;
+	display: inline-block;
+	padding-right: 35px;
+	padding-top: 13px;
+}
+.settingsIcon {
+	height: 24px;
+	width: 24px;
+}
+.warn {
+	text-align: left !important;
+	padding-left: 20px;
+}
+
+/* Game Cards */
+
+.gameCards {
+  	width:100%;
+  	height: calc(100% - 50px);
+  	text-align: center;
+  	padding-top: 5px;
+  	overflow: auto;
+}
+.gameCard {
+	height: 76px;
+	width: 76px;
+	padding: 0px;
+	margin: 10px;
+	border-radius: 15px 15px 15px 15px;
+  	border: 1px solid #A3A3A3;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	background-color: white;
+  	transition: all 0.4s;
+  	display: inline-block;
+  	overflow: hidden;
+}
+.gameCard:hover {
+	border-radius: 10px 10px 10px 10px;
+  	border: 1px solid black;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  	background-color: #E1E1E1;
+  	filter: brightness(130%);
+}
+.icon {
+	height: 76px;
+	width: 76px;
+}
+.redirCardLink {
+
+}
+
+/* Release Control Manager - Defaults */ 
+
+.crAgar {
+	display: inline-block;
+}
+.crSlope {
+	display: none;
+}
+
+/* Spinner */
+.spinnerParent {
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100%; /* Full height for demonstration */
+  padding-top: 75px;
+}
+.spinner {
+  width: 3rem;
+  height: 3rem;
+  border: 0.4rem solid rgba(0, 0, 0, 0.2); /* Light gray border */
+  border-top: 0.4rem solid #000; /* Black border on top */
+  border-radius: 50%;
+  animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================
+   FORCED DARK MODE OVERRIDES
+   ===================================== */
+html.dark .spinner {
+  border: 0.4rem solid rgba(255, 255, 255, 0.2) !important;
+  border-top: 0.4rem solid #fff !important;
+}
+
+html.dark body {
+  background-color: #4F4F4F !important;
+  color: white !important;
+}
+
+html.dark .logo-top {
+  background-color: #2E2E2E !important;
+  color: white !important;
+  border: 1px solid #282828 !important;
+}
+
+html.dark .gameCards {
+  background-color: #4F4F4F !important;
+}
+
+html.dark .warn {
+  color: white !important;
+}
+
+html.dark .settingsIcon {
+  filter: invert() !important;
+}
+
+html.dark .vtag {
+  color: white !important;
+}
+
+/* =====================================
+   FORCED LIGHT MODE OVERRIDES
+   ===================================== */
+html.light .spinner {
+  border: 0.4rem solid rgba(0, 0, 0, 0.2) !important;
+  border-top: 0.4rem solid #000 !important;
+}
+
+html.light body {
+  background-color: #DEDDDE !important;
+  color: black !important;
+}
+
+html.light .logo-top {
+  background-color: #E4E4E4 !important;
+  color: black !important;
+  border: 1px solid #A3A3A3 !important;
+}
+
+html.light .gameCards {
+  background-color: #DEDDDE !important;
+}
+
+html.light .warn {
+  color: black !important;
+}
+
+html.light .settingsIcon {
+  filter: none !important;
+}
+
+html.light .vtag {
+  color: black !important;
+}
